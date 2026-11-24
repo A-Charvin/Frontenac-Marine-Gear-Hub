@@ -30,7 +30,7 @@
    ];
    
    const OAUTH_CONFIG = {
-       clientId: "CLIENT_ID",  // PASTE YOUR CLIENT ID
+       clientId: "buEMr51pRqLi8SZB",  // PASTE YOUR CLIENT ID
        portalUrl: "https://www.arcgis.com"
    };
    
