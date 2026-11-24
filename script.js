@@ -42,11 +42,11 @@
    // ================================================================
    const AGOLClient = {
        config: {
-           surveyUrl: 'SURVEY',
-           gearLogUrl: 'GEAR',
-           inventoryUrl: 'INVENTORY'
+           surveyUrl: 'https://services2.arcgis.com/vJlmDE1PmdTcJF0N/arcgis/rest/services/service_a25ddf070d9b49a692eb5ba65e27f33f/FeatureServer/0',
+           gearLogUrl: 'https://services2.arcgis.com/vJlmDE1PmdTcJF0N/arcgis/rest/services/gearLog/FeatureServer/0',
+           inventoryUrl: 'https://services2.arcgis.com/vJlmDE1PmdTcJF0N/arcgis/rest/services/UniformInventory/FeatureServer/0'
        },
-   
+      
        async getToken() {
            try {
                const credential = await IdentityManager.checkSignInStatus(oauthInfo.portalUrl + "/sharing");
