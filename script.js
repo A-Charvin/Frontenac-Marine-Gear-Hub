@@ -1629,7 +1629,7 @@
    // ================================================================
    const oauthInfo = new OAuthInfo({
        appId: OAUTH_CONFIG.clientId,
-       popup: false,
+       popup: true,
        portalUrl: OAUTH_CONFIG.portalUrl,
        expiration: 120
    });
@@ -1638,13 +1638,10 @@
    
    IdentityManager.checkSignInStatus(oauthInfo.portalUrl + "/sharing")
        .then(credential => onSignedIn(credential))
-       .catch(() => {
-           onSignedOut();
-           // If we have a 498/499 error from a previous session, trigger sign-in
-           if (appInitialized) {
-               handleSignIn();
-           }
-       });
+         .catch((error) => {
+             console.log("Not signed in", error);
+             onSignedOut();
+         });
    
    // ================================================================
    // GLOBAL EXPOSURE
